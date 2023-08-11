@@ -20,6 +20,6 @@ def hello(request):
     return render(request,'index.html',context)
 
 def show_item(request,item_code):
-    Item = item.objects.get(code = item_code)
+    Item = item.objects.get(code=item_code)
     context = {'item':Item,}
     return render(request,'item.html',context)
